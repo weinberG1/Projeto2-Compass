@@ -9,6 +9,6 @@ services:
       - 80:80
     environment:
       WORDPRESS_DB_HOST: wordpress.cr0o8ky00uod.us-east-1.rds.amazonaws.com
-      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_USER: teste
       WORDPRESS_DB_PASSWORD: teste123
-      WORDPRESS_DB_NAME: teste
+      WORDPRESS_DB_NAME: wordpress
