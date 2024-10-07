@@ -26,11 +26,11 @@ mkdir /mnt/efs/wordpress/var/www/html
 curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
 
 # Montando o efs
-sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-082721f45bb18c4f6.efs.us-east-1.amazonaws.com:/ efs
+mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0ae75c1b0a5f7958e.efs.us-eas-1.amazonaws.com:/ /mnt/efs
 sudo chown ec2-user:ec2-user /mnt/efs
 
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
 echo "fs-082721f45bb18c4f6.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" >> /etc/fstab
 
 # Subindo o container do docker-compose
-docker-compose -f /home/ec2-user/docker-compose.yml up -d
+docker-compose /home/ec2-user/docker-compose.yml up -d
