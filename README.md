@@ -11,7 +11,7 @@ Este repositório contém a atividade desenvolvida durante a Sprint 6 do Program
 2. Depois em `Criar grupo de segurança` no botão superior direito.
 3. Após isso, coloque um nome e uma descrição para ele.
 4. Em seguida, vá em adicionar regras de entrada e libere as seguintes portas:
-   - **TCP/3306**
+   - **TCP/3306 (MySQL)**
    - **TCP/22 (SSH)**
    - **TCP/80 (HTTP)**
 5. Por fim clique em `Criar grupo de segurança`.
