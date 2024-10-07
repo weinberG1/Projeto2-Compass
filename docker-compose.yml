@@ -9,7 +9,7 @@ services:
       - 80:80
       - 8080:8080
     environment:
-      WORDPRESS_DB_HOST: database-wp.cr0o8ky00uod.us-east-1.rds.amazonaws.com:3306
-      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_HOST: database-1.cr0o8ky00uod.us-east-1.rds.amazonaws.com:3306
+      WORDPRESS_DB_USER: teste
       WORDPRESS_DB_PASSWORD: teste123
-      WORDPRESS_DB_NAME: database-wp
+      WORDPRESS_DB_NAME: database-1
