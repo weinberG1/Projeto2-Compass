@@ -33,4 +33,5 @@ sudo chown ec2-user:ec2-user /mnt/efs
 echo "fs-082721f45bb18c4f6.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" >> /etc/fstab
 
 # Subindo o container do docker-compose
-docker-compose /home/ec2-user/docker-compose.yml up -d
+cd /home/ec2-user
+docker-compose up -d
