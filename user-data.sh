@@ -1,8 +1,8 @@
 #!bin/bash
 
-sudo apt update -y
-sudo apt install -y docker
-sudo apt install -y amazon-efs-utils
+sudo yum update -y
+sudo yum install -y docker
+sudo yum install -y amazon-efs-utils
  
 systemctl start docker
 systemctl enable docker
