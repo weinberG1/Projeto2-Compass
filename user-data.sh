@@ -1,9 +1,9 @@
 #!bin/bash
 
-yum update -y
-yum install -y docker
-yum install -y amazon-efs-utils
-
+apt update -y
+apt install -y docker
+apt install -y amazon-efs-utils
+ 
 systemctl start docker
 systemctl enable docker
 usermod -aG docker ec2-user
