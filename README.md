@@ -49,7 +49,7 @@ Este repositório contém a atividade desenvolvida durante a Sprint 6 do Program
 1. Vá para a página de serviço EC2, e clique em `Instancias` no menu lateral esquerdo.
 2. Clicar em `Executar instâncias` na parte superior direita da tela.
 3. No meu caso fiz a seguinte configuração de Instance:
-   - **AMI:** Ubuntu 24.04
+   - **AMI:** Amazon Linux 2
    - **Tipo:** t3.small
    - **Armazenamento:** 16gb SSD
 4. Em detalhes avançados, vá para `Dados do usuário` e selecione o arquivo `user-data.sh`, que é o script para a automação da instancia.
