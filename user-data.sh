@@ -32,6 +32,8 @@ sudo curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
 sudo echo "fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" >> /etc/fstab
 
+sudo yum install mysql -y
+
 # Verificacao se o banco de dados ja existe
 sudo mysql --host="database-1.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS database1;"
 
