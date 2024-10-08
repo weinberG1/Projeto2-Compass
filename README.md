@@ -50,7 +50,7 @@ Este repositório contém a atividade desenvolvida durante a Sprint 6 do Program
 2. Clicar em `Executar instâncias` na parte superior direita da tela.
 3. No meu caso fiz a seguinte configuração de Instance:
    - **AMI:** Amazon Linux 2
-   - **Tipo:** t3.small
+   - **Tipo:** t3.micro
    - **Armazenamento:** 16gb SSD
 4. Em detalhes avançados, vá para `Dados do usuário` e selecione o arquivo `user-data.sh`, que é o script para a automação da instancia.
 5. Após isso, vá em `Executar Instancia`.
