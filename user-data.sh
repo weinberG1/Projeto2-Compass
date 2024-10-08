@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Atualizando o sistema, bem como instalando o docker e o efs 
 sudo yum update -y
@@ -30,7 +30,7 @@ sudo mkdir wordpress
 sudo curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
 
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
-sudo echo "fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" >> /etc/fstab
+echo "fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" | sudo tee -a /etc/fstab
 
 sudo yum install mysql -y
 
