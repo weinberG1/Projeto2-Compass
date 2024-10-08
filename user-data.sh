@@ -2,8 +2,8 @@
 
 # Atualizando o sistema, bem como instalando o docker e o efs 
 sudo yum update -y
-sudo amazon-linux-extras install docker -y
 sudo yum install amazon-efs-utils nfs-utils -y
+sudo amazon-linux-extras install docker -y
 
 #Startando o serviço do docker e habilitando para sempre iniciar com o sistema
 sudo systemctl enable docker
