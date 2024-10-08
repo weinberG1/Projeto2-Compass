@@ -17,9 +17,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo mv /usr/local/bin/docker-compose /bin/docker-compose
 
 # Criando o diretório para o wordpress no efs
-sudo cd /mnt
+cd /mnt
 sudo mkdir efs
-sudo cd efs
+cd efs
 sudo mkdir wordpress
 
 # Montando o efs
@@ -36,5 +36,5 @@ sudo echo "fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0
 sudo mysql --host="database-1.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS database1;"
 
 # Subindo o container do docker-compose
-sudo cd /home/ec2-user
+cd /home/ec2-user
 sudo docker-compose up -d
