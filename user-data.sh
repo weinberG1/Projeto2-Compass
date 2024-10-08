@@ -2,14 +2,13 @@
 
 # Atualizando o sistema, bem como instalando o docker e o efs 
 sudo yum update -y
-sudo yum install docker -y
-sudo yum install amazon-efs-utils -y
+sudo amazon-linux-extras install docker -y
+sudo yum install amazon-efs-utils nfs-utils -y
 
 #Startando o serviço do docker e habilitando para sempre iniciar com o sistema
-sudo systemctl start docker
 sudo systemctl enable docker
+sudo service docker start
 sudo usermod -aG docker ec2-user
-sudo chkconfig docker on
 
 # Instalando o docker-compose
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
