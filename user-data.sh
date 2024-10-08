@@ -35,6 +35,9 @@ curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/docke
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
 echo "fs-082721f45bb18c4f6.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" >> /etc/fstab
 
+# Verificacao se o banco de dados ja existe
+mysql --host="database-1.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS database1;"
+
 # Subindo o container do docker-compose
 cd /home/ec2-user
 docker-compose up -d
