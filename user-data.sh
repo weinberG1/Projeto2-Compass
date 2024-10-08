@@ -35,7 +35,7 @@ echo "fs-03fea74ec7e0948bb.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" |
 sudo yum install mysql -y
 
 # Verificacao se o banco de dados ja existe
-sudo mysql --host="database1.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS database1;"
+sudo mysql --host="databasewp.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS databasewp;"
 
 # Subindo o container do docker-compose
 cd /home/ec2-user
