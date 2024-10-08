@@ -32,11 +32,6 @@ sudo curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
 echo "fs-03fea74ec7e0948bb.efs.us-east-1.amazonaws.com:/ efs nfs defaults 0 0" | sudo tee -a /etc/fstab
 
-sudo yum install mysql -y
-
-# Verificacao se o banco de dados ja existe
-sudo mysql --host="databasewp.cr0o8ky00uod.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS databasewp;"
-
 # Subindo o container do docker-compose
 cd /home/ec2-user
 sudo docker-compose up -d
