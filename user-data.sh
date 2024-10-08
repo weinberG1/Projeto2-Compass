@@ -16,15 +16,15 @@ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 sudo mv /usr/local/bin/docker-compose /bin/docker-compose
 
+# Montando o efs
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ /mnt/efs
+sudo chown ec2-user:ec2-user /mnt/efs
+
 # Criando o diretório para o wordpress no efs
 cd /mnt
 sudo mkdir efs
 cd efs
 sudo mkdir wordpress
-
-# Montando o efs
-sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0ae75c1b0a5f7958e.efs.us-east-1.amazonaws.com:/ /mnt/efs
-sudo chown ec2-user:ec2-user /mnt/efs
 
 # Instalando o arquivo do yml do docker-compose do meu proprio repo no github
 sudo curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
