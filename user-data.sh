@@ -22,11 +22,12 @@ cd efs
 sudo mkdir wordpress
 
 # Montando o efs
-sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-03fea74ec7e0948bb.efs.us-east-1.amazonaws.com:/ /mnt/efs
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-03fea74ec7e0948bb.efs.us-east-1.amazonaws.com:/ efs
 sudo chown ec2-user:ec2-user /mnt/efs
 
 
 # Instalando o arquivo do yml do docker-compose do meu proprio repo no github
+cd /
 sudo curl -sL https://raw.githubusercontent.com/weinberG1/Projeto2-Compass/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
 
 # Habilitando a montagem do efs sempre que o sistema for reiniciado 
